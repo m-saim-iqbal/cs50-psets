@@ -8,6 +8,7 @@
         "corecrt.h": "c",
         "_mingw.h": "c",
         "_mingw_mac.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "cs50.h": "c"
     }
 }
