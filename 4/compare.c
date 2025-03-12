@@ -1,20 +1,22 @@
-#include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 int main(void)
 {
-    char *  j = 0;
-    char *i = 0;
+    char *a = "hi!";
+    char *b = malloc(strlen(a) + 1);
+    
+    if (b == NULL) {
+    	return 1;
+    }    
 
-    j = scanf("Enter an integer: ");
-    i = scanf("Enter another integer: ");
+    for(int i = 0, n = strlen(a); i < n; i++) {
+		b[i] = a[i];
+    }
 
-    if (i == j)
-    {
-        printf("Both are equal");
-    }
-    else
-    {
-        printf("Un equal");
-    }
+    printf("a: %s\n", a);
+    printf("b: %s\n", b);
+
+	free(b);	
 }
